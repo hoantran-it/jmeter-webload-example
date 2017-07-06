@@ -28,23 +28,36 @@
 				</executions>
 			</plugin>
 			<plugin>
-	            <groupId>com.lazerycode.jmeter</groupId>
-	            <artifactId>jmeter-analysis-maven-plugin</artifactId>
-	            <executions>
-	                <execution>
-	                    <id>thread</id>
-	                    <phase>install</phase>
-	                    <goals>
-	                        <goal>analyze</goal>
-	                    </goals>
-	                    <configuration>
-	                        <source>${project.build.directory}/**/*.jtl</source>
-	                        <targetDirectory>${project.build.directory}/jmeter/test_report</targetDirectory>
-	                        <processAllFilesFound>true</processAllFilesFound>
-	                    </configuration>
-	                </execution>
-	            </executions>
-	        </plugin>
+			  <groupId>com.lazerycode.jmeter</groupId>
+			  <artifactId>jmeter-analysis-maven-plugin</artifactId>
+			  <executions>
+			    <execution>
+			      <phase>verify</phase>
+			      <goals>
+			        <goal>analyze</goal>
+			      </goals>
+			      <configuration>
+			        <!--
+			        An AntPath-Style pattern matching a JMeter XML result file to analyze. Must be a fully qualified path.
+			        File may be GZiped, must end in .gz then.
+
+			        Default: not set.
+			        Required.
+			        -->
+			        <source>${project.build.directory}/**/*.jtl</source>
+
+			        <!--
+			        directory where to store analysis result files.
+
+			        Default: ${project.build.directory}
+			        Required.
+			        -->
+			        <targetDirectory>${project.build.directory}/results</targetDirectory>
+			        <processAllFilesFound>true</processAllFilesFound>
+			      </configuration>
+			    </execution>
+			   </executions>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
