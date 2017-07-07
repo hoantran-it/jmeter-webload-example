@@ -53,7 +53,7 @@
 			        Default: ${project.build.directory}
 			        Required.
 			        -->
-			        <targetDirectory>${project.build.directory}/results</targetDirectory>
+			        <targetDirectory>${project.build.directory}/jmeter/results</targetDirectory>
 			        <processAllFilesFound>true</processAllFilesFound>
 			      </configuration>
 			    </execution>
