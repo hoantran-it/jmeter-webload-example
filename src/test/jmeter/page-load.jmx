@@ -18,7 +18,7 @@
           <stringProp name="LoopController.loops">2</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1000</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <longProp name="ThreadGroup.start_time">1437578406000</longProp>
         <longProp name="ThreadGroup.end_time">1437578406000</longProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
@@ -91,9 +91,9 @@
           <stringProp name="filename">url-list.txt</stringProp>
           <boolProp name="ignoreFirstLine">false</boolProp>
           <boolProp name="quotedData">false</boolProp>
-          <boolProp name="recycle">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
           <stringProp name="shareMode">shareMode.all</stringProp>
-          <boolProp name="stopThread">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
           <stringProp name="variableNames">PATH</stringProp>
         </CSVDataSet>
         <hashTree/>
